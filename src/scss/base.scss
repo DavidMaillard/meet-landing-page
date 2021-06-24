@@ -9,19 +9,5 @@ body {
   align-items: center;
   margin: 0;
   font-family: $fontRedHat;
-
-  .attribution {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 25px;
-    mix-blend-mode: normal;
-    opacity: 0.75;
-    text-align: center;
-
-    a {
-      color: #E28625;
-      text-decoration: none;
-    }
-  }
+  @extend .readingText;
 }

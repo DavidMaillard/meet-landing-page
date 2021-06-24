@@ -1,0 +1,40 @@
+// --------------------------------------------------
+// Buttons
+// --------------------------------------------------
+
+.button {
+  background: $colorAccent1;
+  border-radius: 29px;
+  padding: 16px 30px;
+  display: flex;
+  align-items: center;
+  transition: background-color ease-out .2s;
+  will-change: background-color;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  color: #FFFFFF;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #71C0D4;
+  }
+
+  &.secondary {
+    background: $colorAccent2;
+
+    &:hover {
+      background-color: #B18BDD;
+    }
+
+    & > span {
+      color: $colorAccent2Light;
+    }
+  }
+
+  & > span {
+    color: #8FE3F9;
+    margin-left: 4px;
+  }
+}
