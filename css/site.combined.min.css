@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
+* {
+  box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  font-family: "Red Hat Display", sans-serif; }
+  body .attribution {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    text-align: center; }
+    body .attribution a {
+      color: #E28625;
+      text-decoration: none; }
+
+
+
+/*# sourceMappingURL=site.combined.min.css.map */
