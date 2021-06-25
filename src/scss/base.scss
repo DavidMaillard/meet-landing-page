@@ -8,6 +8,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 0;
+  background-color: $light;
   font-family: $fontRedHat;
   @extend .readingText;
 
@@ -107,6 +108,185 @@ body {
               margin-bottom: 0;
             }
           }
+        }
+      }
+    }
+  }
+
+  .step {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    border-radius: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(135, 135, 157, 0.25);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 26px;
+    color: $gray;
+    margin-top: 84px;
+    background-color: $light;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -84px);
+      width: 1px;
+      height: 84px;
+      background-color: rgba(135, 135, 157, 0.25);
+    }
+  }
+
+  .first-step {
+    @extend .step;
+    margin-bottom: 64px;
+  }
+
+  .step-container {
+    width: calc(100% - 80px);
+    max-width: 1110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 184px;
+
+    @media (max-width: $mobileBreakpoint) {
+      width: calc(100% - 48px);
+    }
+
+    .gallery {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 80px;
+
+      @media (max-width: $tabletBreakpoint) {
+        margin-bottom: 48px;
+      }
+
+      @media (max-width: $mobileBreakpoint) {
+        flex-wrap: wrap;
+        margin-bottom: 64px;
+      }
+
+      .gallery-image {
+        width: calc((100% - 90px) / 4);
+        border-radius: 8px;
+        overflow: hidden;
+
+        @media (max-width: $tabletBreakpoint) {
+          width: calc((100% - 33px) / 4);
+        }
+
+        @media (max-width: $mobileBreakpoint) {
+          width: calc((100% - 25px) / 2);
+
+          &:nth-child(1), &:nth-child(2) {
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
+
+    .step-overline {
+      @extend .overline;
+      margin: 0 0 16px;
+    }
+
+    .step-heading {
+      max-width: 445px;
+      text-align: center;
+      margin: 0 0 32px;
+    }
+
+    .step-text {
+      max-width: 540px;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  .footer-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: url('../assets/desktop/image-footer.jpg') center center / cover;
+    padding: 116px 24px 104px;
+
+    @media (max-width: $tabletBreakpoint) {
+      padding: 92px 24px 66px;
+      background-image: url('../assets/tablet/image-footer.jpg');
+    }
+
+    @media (max-width: $mobileBreakpoint) {
+      padding: 92px 24px 72px;
+      background-image: url('../assets/mobile/image-footer.jpg');
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba($colorAccent1, 0.9);
+    }
+
+    & > * {
+      position: relative;
+    }
+
+    .second-step {
+      @extend .step;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, calc(-84px - (56px / 2)));
+    }
+
+    .footer-container {
+      width: 100%;
+      max-width: 1110px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media (max-width: $tabletBreakpoint) {
+        flex-direction: column;
+      }
+
+      .footer-heading {
+        color: $light;
+        flex: 1;
+
+        @media (max-width: $tabletBreakpoint) {
+          text-align: center;
+          max-width: 457px;
+          margin: 0 0 32px;
+        }
+
+        @media (max-width: $mobileBreakpoint) {
+          margin-bottom: 24px;
+        }
+      }
+
+      .footer-text {
+        color: $light;
+        max-width: 350px;
+        margin: 0 92px 0 0;
+
+        @media (max-width: $tabletBreakpoint) {
+          text-align: center;
+          max-width: 573px;
+          margin: 0 0 40px;
+        }
+
+        @media (max-width: $mobileBreakpoint) {
+          margin-bottom: 32px;
         }
       }
     }
