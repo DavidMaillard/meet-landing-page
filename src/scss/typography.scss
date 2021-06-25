@@ -8,6 +8,16 @@ h1 {
   font-size: 64px;
   line-height: 64px;
   color: #28283D;
+
+  @media (max-width: $tabletBreakpoint) {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  @media (max-width: $mobileBreakpoint) {
+    font-size: 40px;
+    line-height: 44px;
+  }
 }
 
 h2 {

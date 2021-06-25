@@ -10,4 +10,104 @@ body {
   margin: 0;
   font-family: $fontRedHat;
   @extend .readingText;
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px 61px;
+
+    @media (max-width: $tabletBreakpoint) {
+      padding: 48px 20px 64px;
+    }
+
+    @media (max-width: $mobileBreakpoint) {
+      padding: 48px 20px 54px;
+    }
+
+    .header-logo {
+      height: 28px;
+    }
+  }
+
+  .hero-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 117px;
+    background-image: url('../assets/desktop/image-hero-left.png'), url('../assets/desktop/image-hero-right.png');
+    background-position: top right calc((100vw - 700px) / 2 + 700px), bottom left calc((100vw - 700px) / 2 + 700px);
+    background-size: auto 303px;
+    background-repeat: no-repeat;
+
+    @media (max-width: $tabletBreakpoint) {
+      margin-bottom: 80px;
+      background-image: url('../assets/tablet/image-hero.png');
+      background-position: top center;
+      background-size: auto calc(min(39vw, 303px));
+    }
+
+    @media (max-width: $mobileBreakpoint) {
+      margin-bottom: 64px;
+    }
+
+    .hero-content {
+      width: 100%;
+      max-width: 540px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media (max-width: $tabletBreakpoint) {
+        margin-top: calc(min(calc(39vw + 72px), calc(303px + 72px)));
+      }
+
+      @media (max-width: $mobileBreakpoint) {
+        margin-top: calc(min(calc(39vw + 48px), calc(303px + 48px)));
+      }
+
+      .hero-heading {
+        text-align: center;
+        margin: 47px 0 34px;
+
+        @media (max-width: $tabletBreakpoint) {
+          margin: 0 0 24px;
+        }
+      }
+
+      .hero-text {
+        color: $gray;
+        text-align: center;
+        margin: 0 0 32px;
+      }
+
+      .hero-buttons {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 7px;
+
+        @media (max-width: $tabletBreakpoint) {
+          margin-bottom: 0;
+        }
+
+        @media (max-width: $mobileBreakpoint) {
+          flex-direction: column;
+        }
+
+        .button {
+          margin: 0 8px;
+
+          @media (max-width: $mobileBreakpoint) {
+            margin: 0 0 16px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
