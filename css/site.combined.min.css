@@ -135,7 +135,8 @@ body {
           margin-top: calc(min(calc(39vw + 72px), calc(303px + 72px))); } }
       @media (max-width: 600px) {
         body .hero-banner .hero-content {
-          margin-top: calc(min(calc(39vw + 48px), calc(303px + 48px))); } }
+          margin-top: calc(min(calc(39vw + 48px), calc(303px + 48px)));
+          padding: 0 24px; } }
       body .hero-banner .hero-content .hero-heading {
         text-align: center;
         margin: 47px 0 34px; }
